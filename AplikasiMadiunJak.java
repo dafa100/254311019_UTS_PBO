@@ -34,25 +34,42 @@ class MadiunMotor extends LayananTransportasi {
     
     public void prosesTransaksi(){
         System.out.println("Transaksi oleh "+nama+" - "+nim+"");
+        System.out.println("Nama driver "+namaDriver);
+        System.out.println("Jarak "+jarak+" km ");
+        System.out.println("Saldo "+saldoUser);
     }
 }
 
 class MadiunMobil extends LayananTransportasi {
-    private double tarif = 5000;
+    private int nim;
+    private String nama;
+    private double tarif;
     
-    public MadiunMobil(String namaDriver, double jarak, double saldoUser){
+    public MadiunMobil(String namaDriver, double jarak, double saldoUser, int nim, String nama){
         super(namaDriver, jarak, saldoUser);
+        this.tarif = 5000;
+        this.nim = nim;
+        this.nama = nama;
     }
 
     @Override
     public void hitungTarif(){
         System.out.println("Tarif perjalanan adalah: "+tarif+" / km");
     }
+
+    public void prosesTransaksi(){
+        System.out.println("Transaksi oleh "+nama+" - "+nim+"");
+        System.out.println("Nama driver "+namaDriver);
+        System.out.println("Jarak "+jarak+" km ");
+        System.out.println("Saldo "+saldoUser);
+    }
 }
 
 public class AplikasiMadiunJak {
     public static void main(String[] args) {
         MadiunMotor motor = new MadiunMotor("Dafa",12,10000,254311019,"Sebastian");
+        MadiunMobil mobil = new MadiunMobil("Hermawan",5,5600,254311022,"Tia");
         motor.prosesTransaksi();
+        mobil.prosesTransaksi();
     }
 }
