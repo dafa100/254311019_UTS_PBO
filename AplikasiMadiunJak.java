@@ -29,7 +29,7 @@ class MadiunMotor extends LayananTransportasi {
 
     @Override
     public void hitungTarif(){
-        System.out.println("Tarif perjalanan adalah: "+tarif+" / km");
+        System.out.println("Tarif perjalanan adalah: "+tarif*jarak);
     }
     
     public void prosesTransaksi(){
@@ -54,7 +54,7 @@ class MadiunMobil extends LayananTransportasi {
 
     @Override
     public void hitungTarif(){
-        System.out.println("Tarif perjalanan adalah: "+tarif+" / km");
+        System.out.println("Tarif perjalanan adalah: "+tarif*jarak);
     }
 
     public void prosesTransaksi(){
