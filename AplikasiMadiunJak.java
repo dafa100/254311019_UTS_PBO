@@ -70,6 +70,8 @@ public class AplikasiMadiunJak {
         MadiunMotor motor = new MadiunMotor("Dafa",12,10000,254311019,"Sebastian");
         MadiunMobil mobil = new MadiunMobil("Hermawan",5,5600,254311022,"Tia");
         motor.prosesTransaksi();
+        motor.hitungTarif();
         mobil.prosesTransaksi();
+        mobil.hitungTarif();
     }
 }
