@@ -49,3 +49,7 @@ class MadiunMobil extends LayananTransportasi {
         System.out.println("Tarif perjalanan adalah: "+tarif+" / km");
     }
 }
+
+public class AplikasiMadiunJak {
+    
+}
