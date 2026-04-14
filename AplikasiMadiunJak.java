@@ -17,10 +17,10 @@ abstract class LayananTransportasi {
 
 class MadiunMotor extends LayananTransportasi {
     private double tarif;
-    private double nim;
+    private int nim;
     private String nama;
     
-    public MadiunMotor(String namaDriver, double jarak, double saldoUser, double nim, String nama){
+    public MadiunMotor(String namaDriver, double jarak, double saldoUser, int nim, String nama){
         super(namaDriver, jarak, saldoUser);
         this.tarif = 2500;
         this.nim = nim;
@@ -33,7 +33,7 @@ class MadiunMotor extends LayananTransportasi {
     }
     
     public void prosesTransaksi(){
-        System.out.println("Transaksi oleh ");
+        System.out.println("Transaksi oleh "+nama+" - "+nim+"");
     }
 }
 
@@ -51,5 +51,8 @@ class MadiunMobil extends LayananTransportasi {
 }
 
 public class AplikasiMadiunJak {
-    
+    public static void main(String[] args) {
+        MadiunMotor motor = new MadiunMotor("Dafa",12,10000,254311019,"Sebastian");
+        motor.prosesTransaksi();
+    }
 }
